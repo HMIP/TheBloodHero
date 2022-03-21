@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:scrollbarSize="6dp"
+    tools:context=".Appointment">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/appointment_name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personal" />
+
+    <TextView
+        android:id="@+id/ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/appointment_icno"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/appointment__gender"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic" />
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/appointment_DOB"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+    <EditText
+        android:id="@+id/type_name"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/et_name"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/personal"
+        android:autofillHints="@string/et_name" />
+
+    <EditText
+        android:id="@+id/type_ic"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="124dp"
+        android:ems="10"
+        android:hint="@string/et_icno"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/ic"
+        app:layout_constraintTop_toBottomOf="@+id/type_name"
+        android:autofillHints="@string/et_icno" />
+
+    <Spinner
+        android:id="@+id/spinner_gender"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="115dp"
+        app:layout_constraintStart_toEndOf="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/type_ic" />
+
+    <TextView
+        android:id="@+id/blood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/et_blood"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthday" />
+
+    <TextView
+        android:id="@+id/personal"
+        android:layout_width="414dp"
+        android:layout_height="30dp"
+        android:background="#FF6637"
+        android:backgroundTint="#FF6637"
+        android:gravity="center"
+        android:text="@string/personal"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_date"
+        tools:targetApi="lollipop" />
+
+    <Spinner
+        android:id="@+id/spinner_blood"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="74dp"
+        app:layout_constraintStart_toEndOf="@+id/blood"
+        app:layout_constraintTop_toBottomOf="@+id/text_datebd" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="6dp"
+        android:backgroundTint="#FF6637"
+        android:text="@string/btn_next"
+        android:textColor="#FEFEFE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:targetApi="lollipop" />
+
+    <EditText
+        android:id="@+id/text_datebd"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="62dp"
+        android:ems="10"
+        android:hint="@string/et_DOB"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/birthday"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_gender"
+        android:autofillHints="@string/et_DOB" />
+
+    <ImageView
+        android:id="@+id/icon_bd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="134dp"
+        android:onClick="choice_bd"
+        android:scrollbarSize="4dp"
+        app:layout_constraintStart_toEndOf="@+id/text_datebd"
+        app:layout_constraintTop_toBottomOf="@+id/personal"
+        app:srcCompat="@drawable/ic_bd"
+        android:contentDescription="@string/d_icon_calendar" />
+
+    <TextView
+        android:id="@+id/ethnicity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/appointment_ethnicity"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blood" />
+
+    <TextView
+        android:id="@+id/m_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/appointment_mstatus"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ethnicity" />
+
+    <TextView
+        android:id="@+id/occupation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/appointment_occupation"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/m_status" />
+
+    <TextView
+        android:id="@+id/phone_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/appointment_hpno"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/occupation" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/appointment_email"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_no" />
+
+    <Spinner
+        android:id="@+id/spinner_race"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="98dp"
+        app:layout_constraintStart_toEndOf="@+id/ethnicity"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_blood" />
+
+    <Spinner
+        android:id="@+id/m_state"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="54dp"
+        app:layout_constraintStart_toEndOf="@+id/m_status"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_race" />
+
+    <EditText
+        android:id="@+id/edit_occupation"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="76dp"
+        android:ems="10"
+        android:hint="@string/et_occupation"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/occupation"
+        app:layout_constraintTop_toBottomOf="@+id/m_state"
+        android:autofillHints="@string/et_occupation" />
+
+    <EditText
+        android:id="@+id/edit_no"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="107dp"
+        android:ems="10"
+        android:hint="@string/et_phoneno"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/phone_no"
+        app:layout_constraintTop_toBottomOf="@+id/edit_occupation"
+        android:autofillHints="@string/et_phoneno" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="123dp"
+        android:ems="10"
+        android:hint="@string/et_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toEndOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/edit_no"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="#FF6637"
+        android:gravity="center"
+        android:text="@string/appointment_date_and_time"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_day"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/appointment_date"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/appointment_time"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_day" />
+
+    <EditText
+        android:id="@+id/edit_date"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/et_date"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/text_day"
+        app:layout_constraintTop_toBottomOf="@+id/edit_email"
+        android:autofillHints="" />
+
+    <ImageView
+        android:id="@+id/dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="choice_dt"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintStart_toEndOf="@+id/edit_time_appoint"
+        app:srcCompat="@drawable/ic_bd"
+        android:contentDescription="@string/d_icon_calendar" />
+
+    <EditText
+        android:id="@+id/edit_time_appoint"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="13dp"
+        android:ems="10"
+        android:hint="10: 00 - 18: 00"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/text_time"
+        app:layout_constraintTop_toBottomOf="@+id/edit_date"
+        android:autofillHints="@string/appointment_time" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
